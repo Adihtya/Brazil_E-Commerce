@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Brazilian E-Commerce Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.31.1/build/stlite.css"/>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.31.1/build/stlite.js"></script>
+    <script>
+      stlite.mount(
+        {
+          requirements: ["streamlit", "pandas", "plotly"],
+          entrypoint: "brazillian_E-Commerce_Dashboard.py",
+          files: {
+            "brazillian_E-Commerce_Dashboard.py": { url: "brazillian_E-Commerce_Dashboard.py" },
+            "olist_orders_dataset.csv": { url: "olist_orders_dataset.csv" },
+            "olist_order_items_dataset.csv": { url: "olist_order_items_dataset.csv" },
+            "olist_order_payments_dataset.csv": { url: "olist_order_payments_dataset.csv" },
+            "olist_order_reviews_dataset.csv": { url: "olist_order_reviews_dataset.csv" },
+            "olist_customers_dataset.csv": { url: "olist_customers_dataset.csv" },
+            "olist_products_dataset.csv": { url: "olist_products_dataset.csv" },
+            "product_category_name_translation.csv": { url: "product_category_name_translation.csv" },
+            "olist_sellers_dataset.csv": { url: "olist_sellers_dataset.csv" }
+          },
+        },
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
